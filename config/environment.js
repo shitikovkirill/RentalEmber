@@ -3,7 +3,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'super-rentals',
+    modulePrefix: 'handbook',
     environment,
     rootURL: '/',
     locationType: 'auto',
