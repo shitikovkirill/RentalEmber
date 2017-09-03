@@ -27,7 +27,7 @@ module.exports = function(environment) {
       providers: {
         'google-oauth2': {
           redirectUri: 'http://localhost:4200/oauth2callback',
-          apiKey: process.env.GOOGLE_CLIENT_ID,
+          apiKey: 'AIzaSyAnvEIBceLwL5iObbXjxX_cC32OmZbZM2s',
         }
       }
     },
