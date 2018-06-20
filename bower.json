@@ -1,6 +1,5 @@
 {
-  "name": "technic-guide",
+  "name": "super-rentals",
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.2"
   }
 }

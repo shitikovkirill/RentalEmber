@@ -1,9 +1,8 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'handbook',
+    modulePrefix: 'super-rentals',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -21,27 +20,6 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
-
-    torii: {
-      providers: {
-        'google-oauth2': {
-          redirectUri: 'http://localhost:4200/oauth2callback',
-          apiKey: process.env.GOOGLE_CLIENT_ID,
-        }
-      }
-    },
-
-    apiHost: 'http://localhost:3000/api',
-
-    contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self'",
-      'font-src': "'self' maxcdn.bootstrapcdn.com",
-      'connect-src': "'self' http://localhost:3000/",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline' maxcdn.bootstrapcdn.com",
-      'media-src': "'self'"
     }
   };
 
@@ -55,7 +33,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
@@ -63,13 +40,15 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.APP.autoboot = false;
   }
 
   if (environment === 'production') {
-    ENV.apiHost = "https://stark-taiga-1325.herokuapp.com/api";
-
-    ENV.torii.providers["google-oauth2"].redirectUri = "https://stark-taiga-1325.herokuapp.com/oauth2callback";
-    ENV.torii.providers["google-oauth2"].apiKey = "942171989971-orpfnmbskoef1la88r8g1j2dqdveduck.apps.googleusercontent.com";
+    // use mirage in production too since the app will break
+    // if there is no API for Ember Data
+    ENV['ember-cli-mirage'] = {
+      enabled: true
+    }
   }
 
   return ENV;
