@@ -47,7 +47,7 @@ module.exports = function(environment) {
     // use mirage in production too since the app will break
     // if there is no API for Ember Data
     ENV['ember-cli-mirage'] = {
-      enabled: true
+      enabled: false
     }
   }
 

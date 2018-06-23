@@ -18,12 +18,12 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd super-rentals`
 * `yarn install`
 
 ## Running / Development
 
 * `ember serve`
+* `ember server --environment production --proxy=http://127.0.0.1:8000`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
