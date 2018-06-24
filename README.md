@@ -47,8 +47,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build --environment production` (production)
 
 ### Deploying
-
-Specify what it takes to deploy your app.
+* Rename `.env.vagrant` to `.env`
+* Add key to vagrant: `ssh-copy-id vagrant@192.168.50.50`
+* `ember deploy production --verbose --activate=true`
 
 ## Further Reading / Useful Links
 
