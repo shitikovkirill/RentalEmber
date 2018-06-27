@@ -18,7 +18,8 @@ module.exports = function(environment) {
     },
 
     APP: {
-      namespace: 'backend/api'
+      namespace: 'api',
+      host: 'http://127.0.0.1:8000'
     }
   };
 

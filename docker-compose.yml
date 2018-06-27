@@ -4,6 +4,7 @@ services:
     image: danlynn/ember-cli:3.1.4-node_10.1
     environment:
       CI: "true"
+    command: "ember server --environment production --proxy=http://127.0.0.1:8000"
     volumes:
       - .:/myapp
     ports:
