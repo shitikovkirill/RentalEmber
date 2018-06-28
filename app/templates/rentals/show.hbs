@@ -5,7 +5,10 @@
       <strong>Owner:</strong> {{model.owner}}
     </div>
     <div class="detail">
-      <strong>Type:</strong> {{rental-property-type model.category}} - {{model.category}}
+      <strong>Type:</strong>
+      {{#each model.categories as |category| }}
+        <span>{{category.title}}</span>
+      {{/each}}
     </div>
     <div class="detail">
       <strong>Location:</strong> {{model.city}}

@@ -8,7 +8,10 @@
     <span>Owner:</span> {{rental.owner}}
   </div>
   <div class="detail type">
-    <span>Type:</span> {{rental-property-type rental.category}} - {{rental.category}}
+    <span>Type:</span>
+    {{#each rental.categories as |category| }}
+      <span>{{category.title}}</span>
+    {{/each}}
   </div>
   <div class="detail location">
     <span>Location:</span> {{rental.city}}
