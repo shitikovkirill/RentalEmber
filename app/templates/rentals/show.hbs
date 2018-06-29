@@ -2,19 +2,19 @@
   <h2 class="title">{{model.title}}</h2>
   <div class="right detail-section">
     <div class="detail owner">
-      <strong>Owner:</strong> {{model.owner}}
+      <strong>Владелец:</strong> {{model.owner}}
     </div>
     <div class="detail">
-      <strong>Type:</strong>
+      <strong>Категории:</strong>
       {{#each model.categories as |category| }}
         <span>{{category.title}}</span>
       {{/each}}
     </div>
     <div class="detail">
-      <strong>Location:</strong> {{model.city}}
+      <strong>Расположение:</strong> {{model.city}}
     </div>
     <div class="detail">
-      <strong>Number of bedrooms:</strong> {{model.bedrooms}}
+      <strong>Количество комнат:</strong> {{model.bedrooms}}
     </div>
     <p>&nbsp;</p>
     <p class="description">{{model.description}}</p>
