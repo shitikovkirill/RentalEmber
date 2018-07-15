@@ -15,6 +15,7 @@ export default function() {
       id: 'grand-old-mansion',
       attributes: {
         title: "Grand Old Mansion",
+        storey: 3,
         owner: "Veruca Salt",
         city: "San Francisco",
         bedrooms: 15,
@@ -27,6 +28,7 @@ export default function() {
       id: 'urban-living',
       attributes: {
         title: "Urban Living",
+        storey: 2,
         owner: "Mike Teavee",
         city: "Seattle",
         bedrooms: 1,
@@ -39,6 +41,7 @@ export default function() {
       id: 'downtown-charm',
       attributes: {
         title: "Downtown Charm",
+        storey: 0,
         owner: "Violet Beauregarde",
         city: "Portland",
         bedrooms: 3,
