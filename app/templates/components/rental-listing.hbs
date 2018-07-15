@@ -4,8 +4,11 @@
     <small>Увеличить</small>
   </a>
   <h3>{{link-to rental.title "rentals.show" rental class=rental.id}}</h3>
-  <div class="detail owner">
-    <span>Владелец:</span> {{rental.owner}}
+  <div class="detail storey">
+    <span>Этажность дома:</span> {{rental.storey}}
+  </div>
+  <div class="detail bedrooms">
+    <span>Количество комнат:</span> {{rental.bedrooms}}
   </div>
   <div class="detail type">
     <span>Категории:</span>
@@ -16,8 +19,6 @@
   <div class="detail location">
     <span>Расположение:</span> {{rental.city}}
   </div>
-  <div class="detail bedrooms">
-    <span>Количество комнат:</span> {{rental.bedrooms}}
-  </div>
+
   {{location-map location=rental.city}}
 </article>
