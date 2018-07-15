@@ -1,17 +1,14 @@
 <div class="jumbo show-listing">
   <h2 class="title">{{model.title}}</h2>
   <div class="right detail-section">
-    <div class="detail owner">
-      <strong>Владелец:</strong> {{model.owner}}
+    <div class="detail storey">
+      <strong>Этажность дома:</strong> {{model.storey}}
     </div>
     <div class="detail">
       <strong>Категории:</strong>
       {{#each model.categories as |category| }}
         <span>{{category.title}}</span>
       {{/each}}
-    </div>
-    <div class="detail">
-      <strong>Расположение:</strong> {{model.city}}
     </div>
     <div class="detail">
       <strong>Количество комнат:</strong> {{model.bedrooms}}

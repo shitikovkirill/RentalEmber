@@ -10,15 +10,11 @@
   <div class="detail bedrooms">
     <span>Количество комнат:</span> {{rental.bedrooms}}
   </div>
-  <div class="detail type">
+  <div class="detail category">
     <span>Категории:</span>
     {{#each rental.categories as |category| }}
       <span>{{category.title}}</span>
     {{/each}}
   </div>
-  <div class="detail location">
-    <span>Расположение:</span> {{rental.city}}
-  </div>
 
-  {{location-map location=rental.city}}
 </article>
