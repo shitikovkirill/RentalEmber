@@ -1,2 +1,13 @@
-{{input type="number" value=storey key-up=(action 'handleFilterEntry') class="light" placeholder="Поиск по городу"}}
+{{input type="number"
+        value=storey
+        key-up=(action 'handleFilterEntry')
+        class="light"
+        placeholder="Поиск по этажности дома"}}
+
+{{input type="number"
+        value=bedrooms
+        key-up=(action 'handleFilterEntry')
+        class="light"
+        placeholder="Поиск по количеству комнат"}}
+
 {{yield results}}
