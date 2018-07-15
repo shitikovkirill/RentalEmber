@@ -3,8 +3,8 @@ import Controller from '@ember/controller';
 export default Controller.extend({
   actions: {
     filterAll(param) {
-      if (param !== '') {
-        return this.get('store').query('rental', { city: param }).then((filteredResults) => {
+      if (param) {
+        return this.get('store').query('rental', param).then((filteredResults) => {
           return { query: param, results: filteredResults };
         });
       } else {
