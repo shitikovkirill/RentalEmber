@@ -10,6 +10,12 @@
   <div class="detail bedrooms">
     <span>Количество комнат:</span> {{rental.bedrooms}}
   </div>
+  <div class="detail total-square">
+    <span>Общая квадратура:</span> {{rental.total_square}}
+  </div>
+  <div class="detail residential-square">
+    <span>Жилая квадратура:</span> {{rental.residential_square}}
+  </div>
   <div class="detail category">
     <span>Категории:</span>
     {{#each rental.categories as |category| }}
@@ -17,4 +23,17 @@
     {{/each}}
   </div>
 
+  <div class="detail design">
+    <span>Конструкции дома:</span>
+    {{#each rental.design as |design| }}
+      <span>{{design.title}}</span>
+    {{/each}}
+  </div>
+
+  <div class="detail period">
+    <span>Период постройки:</span> {{rental.period.title}}
+  </div>
+  <div class="detail district">
+    <span>Район:</span> {{rental.district.title}}
+  </div>
 </article>
