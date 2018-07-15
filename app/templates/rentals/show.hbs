@@ -5,14 +5,23 @@
       <strong>Этажность дома:</strong> {{model.storey}}
     </div>
     <div class="detail">
+      <strong>Количество комнат:</strong> {{model.bedrooms}}
+    </div>
+
+    <div class="detail total-square">
+      <span>Общая квадратура:</span> {{model.totalsquare}}
+    </div>
+    <div class="detail residential-square">
+      <span>Жилая квадратура:</span> {{model.residentialsquare}}
+    </div>
+
+    <div class="detail">
       <strong>Категории:</strong>
       {{#each model.categories as |category| }}
         <span>{{category.title}}</span>
       {{/each}}
     </div>
-    <div class="detail">
-      <strong>Количество комнат:</strong> {{model.bedrooms}}
-    </div>
+
     <p>&nbsp;</p>
     <p class="description">{{model.description}}</p>
   </div>

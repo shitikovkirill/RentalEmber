@@ -5,8 +5,8 @@ export default DS.Model.extend({
 
   storey: DS.attr('number'),
   bedrooms: DS.attr('number'),
-  'total-square': DS.attr('number'),
-  'residential-square': DS.attr('number'),
+  totalsquare: DS.attr('number'),
+  residentialsquare: DS.attr('number'),
 
   image: DS.attr(),
 
