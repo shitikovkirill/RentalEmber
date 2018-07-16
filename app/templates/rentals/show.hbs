@@ -22,6 +22,20 @@
       {{/each}}
     </div>
 
+    <div class="detail design">
+      <span>Конструкции дома:</span>
+      {{#each model.design as |design| }}
+        <span>{{design.title}}</span>
+      {{/each}}
+    </div>
+
+    <div class="detail period">
+      <span>Период постройки:</span> {{model.period.title}}
+    </div>
+    <div class="detail district">
+      <span>Район:</span> {{model.district.title}}
+    </div>
+
     <p>&nbsp;</p>
     <p class="description">{{model.description}}</p>
   </div>
