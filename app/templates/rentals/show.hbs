@@ -1,21 +1,41 @@
 <div class="jumbo show-listing">
   <h2 class="title">{{model.title}}</h2>
   <div class="right detail-section">
-    <div class="detail owner">
-      <strong>Владелец:</strong> {{model.owner}}
+    <div class="detail storey">
+      <strong>Этажность дома:</strong> {{model.storey}}
     </div>
+    <div class="detail">
+      <strong>Количество комнат:</strong> {{model.bedrooms}}
+    </div>
+
+    <div class="detail total-square">
+      <span>Общая квадратура:</span> {{model.totalsquare}}
+    </div>
+    <div class="detail residential-square">
+      <span>Жилая квадратура:</span> {{model.residentialsquare}}
+    </div>
+
     <div class="detail">
       <strong>Категории:</strong>
       {{#each model.categories as |category| }}
         <span>{{category.title}}</span>
       {{/each}}
     </div>
-    <div class="detail">
-      <strong>Расположение:</strong> {{model.city}}
+
+    <div class="detail design">
+      <span>Конструкции дома:</span>
+      {{#each model.design as |design| }}
+        <span>{{design.title}}</span>
+      {{/each}}
     </div>
-    <div class="detail">
-      <strong>Количество комнат:</strong> {{model.bedrooms}}
+
+    <div class="detail period">
+      <span>Период постройки:</span> {{model.period.title}}
     </div>
+    <div class="detail district">
+      <span>Район:</span> {{model.district.title}}
+    </div>
+
     <p>&nbsp;</p>
     <p class="description">{{model.description}}</p>
   </div>

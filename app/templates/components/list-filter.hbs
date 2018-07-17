@@ -1,2 +1,54 @@
-{{input value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Поиск по городу"}}
+<div class="filter">
+  <div class="title">Этажность дома: </div>
+  <div class="filter-slider">{{ui-slider
+  value=storey
+  min=0
+  max=20
+  step=1
+  immediateResponse=true
+  ticks='0,5,10,15,20'
+  ticksLabels='0,5,10,15,20'
+  changed='handleFilterEntry'}}</div>
+</div>
+
+<div class="filter">
+  <div class="title">Количество комнат:</div>
+  <div class="filter-slider">{{ui-slider
+  value=bedrooms
+  min=0
+  max=10
+  step=1
+  immediateResponse=true
+  ticks='0,5,10'
+  ticksLabels='0,5,10'
+  changed='handleFilterEntry'}}</div>
+</div>
+
+<div class="filter">
+  <div class="title">Общая квадратура: </div>
+  <div class="filter-slider">{{range-slider
+  value=total_square
+  min=0
+  max=10
+  step=1
+  immediateResponse=true
+  ticks='0,5,10'
+  ticksLabels='0,5,10'
+  changed='handleFilterEntry'}}
+  </div>
+</div>
+
+<div class="filter">
+  <div class="title">Жилая квадратура: </div>
+  <div class="filter-slider">{{range-slider
+  value=residential_square
+  min=0
+  max=10
+  step=1
+  immediateResponse=true
+  ticks='0,5,10'
+  ticksLabels='0,5,10'
+  changed='handleFilterEntry'}}</div>
+</div>
+
 {{yield results}}

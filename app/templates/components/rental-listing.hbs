@@ -4,20 +4,36 @@
     <small>Увеличить</small>
   </a>
   <h3>{{link-to rental.title "rentals.show" rental class=rental.id}}</h3>
-  <div class="detail owner">
-    <span>Владелец:</span> {{rental.owner}}
+  <div class="detail storey">
+    <span>Этажность дома:</span> {{rental.storey}}
   </div>
-  <div class="detail type">
+  <div class="detail bedrooms">
+    <span>Количество комнат:</span> {{rental.bedrooms}}
+  </div>
+  <div class="detail total-square">
+    <span>Общая квадратура:</span> {{rental.totalsquare}}
+  </div>
+  <div class="detail residential-square">
+    <span>Жилая квадратура:</span> {{rental.residentialsquare}}
+  </div>
+  <div class="detail category">
     <span>Категории:</span>
     {{#each rental.categories as |category| }}
       <span>{{category.title}}</span>
     {{/each}}
   </div>
-  <div class="detail location">
-    <span>Расположение:</span> {{rental.city}}
+
+  <div class="detail design">
+    <span>Конструкции дома:</span>
+    {{#each rental.design as |design| }}
+      <span>{{design.title}}</span>
+    {{/each}}
   </div>
-  <div class="detail bedrooms">
-    <span>Количество комнат:</span> {{rental.bedrooms}}
+
+  <div class="detail period">
+    <span>Период постройки:</span> {{rental.period.title}}
   </div>
-  {{location-map location=rental.city}}
+  <div class="detail district">
+    <span>Район:</span> {{rental.district.title}}
+  </div>
 </article>
