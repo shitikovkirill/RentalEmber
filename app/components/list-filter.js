@@ -91,14 +91,17 @@ export default Component.extend({
 
     selectDesign(design) {
       this.set('design', design);
+      this.getFilteringData();
     },
 
     selectDistrict(district) {
       this.set('district', district);
+      this.getFilteringData();
     },
 
     selectPeriod(period){
       this.set('period', period);
+      this.getFilteringData();
     }
   }
 

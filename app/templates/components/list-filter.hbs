@@ -57,6 +57,7 @@
   {{#power-select
     selected=category
     options=categories
+    allowClear=true
     onchange=(action "selectCategory") as |category|}}
     {{category.title}}
   {{/power-select}}
@@ -69,6 +70,7 @@
     {{#power-select
       selected=design
       options=designs
+      allowClear=true
       onchange=(action "selectDesign") as |design|}}
       {{design.title}}
     {{/power-select}}
@@ -81,6 +83,7 @@
     {{#power-select
       selected=district
       options=districts
+      allowClear=true
       onchange=(action "selectDistrict") as |district|}}
       {{district.title}}
     {{/power-select}}
@@ -93,6 +96,7 @@
     {{#power-select
       selected=period
       options=periods
+      allowClear=true
       onchange=(action "selectPeriod") as |period|}}
       {{period.title}}
     {{/power-select}}
