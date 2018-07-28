@@ -7,6 +7,18 @@ export default Component.extend({
   total_square: [0,10],
   residential_square: [0,10],
 
+  categories: null,
+  category: null,
+
+  designs: null,
+  design: null,
+
+  districts: null,
+  district: null,
+
+  periods: null,
+  period: null,
+
   init() {
     this._super(...arguments);
     this.get('filter')({}).then((allResults) => this.set('results', allResults.results));
@@ -38,18 +50,55 @@ export default Component.extend({
       data['max_residential_square'] = this.get('residential_square.1');
     }
 
+    if(this.get('category')){
+      data['category'] = this.get('category.id');
+    }
+
+    if(this.get('design')){
+      data['design'] = this.get('design.id');
+    }
+
+    if(this.get('district')){
+      data['district'] = this.get('district.id');
+    }
+
+    if(this.get('period')){
+      data['period'] = this.get('period.id');
+    }
+
     return data;
+  },
+
+  getFilteringData() {
+    let data = this.getRentalQuery();
+    let filterAction = this.get('filter');
+    filterAction(data).then((resultsObj) => {
+      if (data && resultsObj.query === data) {
+        this.set('results', resultsObj.results);
+      }
+    });
   },
 
   actions: {
     handleFilterEntry() {
-      let data = this.getRentalQuery();
-      let filterAction = this.get('filter');
-      filterAction(data).then((resultsObj) => {
-        if (data && resultsObj.query === data) {
-          this.set('results', resultsObj.results);
-        }
-      });
+      this.getFilteringData();
+    },
+
+    selectCategory(category) {
+      this.set('category', category);
+      this.getFilteringData();
+    },
+
+    selectDesign(design) {
+      this.set('design', design);
+    },
+
+    selectDistrict(district) {
+      this.set('district', district);
+    },
+
+    selectPeriod(period){
+      this.set('period', period);
     }
   }
 
