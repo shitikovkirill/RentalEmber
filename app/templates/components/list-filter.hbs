@@ -1,105 +1,111 @@
 <div class="filter">
-  <div class="title">Этажность дома: </div>
-  <div class="filter-slider">{{ui-slider
-  value=storey
-  min=0
-  max=20
-  step=1
-  immediateResponse=true
-  ticks='0,5,10,15,20'
-  ticksLabels='0,5,10,15,20'
-  changed='handleFilterEntry'}}</div>
-</div>
+  <div class="filter_p">
+    <div class="filter_floor">
+      <div class="title">Этажность дома: </div>
+      <div class="filter-slider">{{ui-slider
+      value=storey
+      min=0
+      max=20
+      step=1
+      immediateResponse=true
+      ticks='0,5,10,15,20'
+      ticksLabels='0,5,10,15,20'
+      changed='handleFilterEntry'}}</div>
+    </div>
 
-<div class="filter">
-  <div class="title">Количество комнат:</div>
-  <div class="filter-slider">{{ui-slider
-  value=bedrooms
-  min=0
-  max=10
-  step=1
-  immediateResponse=true
-  ticks='0,5,10'
-  ticksLabels='0,5,10'
-  changed='handleFilterEntry'}}</div>
-</div>
+    <div class="filter_rooms">
+      <div class="title">Количество комнат:</div>
+      <div class="filter-slider">{{ui-slider
+      value=bedrooms
+      min=0
+      max=10
+      step=1
+      immediateResponse=true
+      ticks='0,5,10'
+      ticksLabels='0,5,10'
+      changed='handleFilterEntry'}}</div>
+    </div>
 
-<div class="filter">
-  <div class="title">Общая квадратура: </div>
-  <div class="filter-slider">{{range-slider
-  value=total_square
-  min=0
-  max=10
-  step=1
-  immediateResponse=true
-  ticks='0,5,10'
-  ticksLabels='0,5,10'
-  changed='handleFilterEntry'}}
-  </div>
-</div>
+    <div class="filter_full">
+      <div class="title">Общая квадратура: </div>
+      <div class="filter-slider">{{range-slider
+      value=total_square
+      min=0
+      max=10
+      step=1
+      immediateResponse=true
+      ticks='0,5,10'
+      ticksLabels='0,5,10'
+      changed='handleFilterEntry'}}
+      </div>
+    </div>
 
-<div class="filter">
-  <div class="title">Жилая квадратура: </div>
-  <div class="filter-slider">{{range-slider
-  value=residential_square
-  min=0
-  max=10
-  step=1
-  immediateResponse=true
-  ticks='0,5,10'
-  ticksLabels='0,5,10'
-  changed='handleFilterEntry'}}</div>
-</div>
+    <div class="filter_living">
+      <div class="title">Жилая квадратура: </div>
+      <div class="filter-slider">{{range-slider
+      value=residential_square
+      min=0
+      max=10
+      step=1
+      immediateResponse=true
+      ticks='0,5,10'
+      ticksLabels='0,5,10'
+      changed='handleFilterEntry'}}</div>
+    </div>
+    </div>
 
-<div class="filter">
-  <div class="title">Категории: </div>
-  <div class="filter-select">
-  {{#power-select
-    selected=category
-    options=categories
-    allowClear=true
-    onchange=(action "selectCategory") as |category|}}
-    {{category.title}}
-  {{/power-select}}
-  </div>
-</div>
+  <div class="filter_s">
+    <div class="filter_cat">
+      <div class="title">Категории: </div>
+      <div class="filter-select">
+      {{#power-select
+        selected=category
+        options=categories
+        allowClear=true
+        onchange=(action "selectCategory") as |category|}}
+        {{category.title}}
+      {{/power-select}}
+      </div>
+    </div>
 
-<div class="filter">
-  <div class="title">Конструкция дома: </div>
-  <div class="filter-select">
-    {{#power-select
-      selected=design
-      options=designs
-      allowClear=true
-      onchange=(action "selectDesign") as |design|}}
-      {{design.title}}
-    {{/power-select}}
-  </div>
-</div>
+    <div class="filter_const">
+        <div class="title">Конструкция дома: </div>
+        <div class="filter-select">
+          {{#power-select
+            selected=design
+            options=designs
+            allowClear=true
+            onchange=(action "selectDesign") as |design|}}
+            {{design.title}}
+          {{/power-select}}
+        </div>
+      </div>
 
-<div class="filter">
-  <div class="title">Район: </div>
-  <div class="filter-select">
-    {{#power-select
-      selected=district
-      options=districts
-      allowClear=true
-      onchange=(action "selectDistrict") as |district|}}
-      {{district.title}}
-    {{/power-select}}
-  </div>
-</div>
+    <div class="filter_tto">
+        <div class="title">Район: </div>
+        <div class="filter-select">
+          {{#power-select
+            selected=district
+            options=districts
+            allowClear=true
+            onchange=(action "selectDistrict") as |district|}}
+            {{district.title}}
+          {{/power-select}}
+        </div>
+      </div>
 
-<div class="filter">
-  <div class="title">Период постройки: </div>
-  <div class="filter-select">
-    {{#power-select
-      selected=period
-      options=periods
-      allowClear=true
-      onchange=(action "selectPeriod") as |period|}}
-      {{period.title}}
-    {{/power-select}}
+      <div class="filter_period">
+        <div class="title">Период постройки: </div>
+        <div class="filter-select">
+          {{#power-select
+            selected=period
+            options=periods
+            allowClear=true
+            onchange=(action "selectPeriod") as |period|}}
+            {{period.title}}
+          {{/power-select}}
+        </div>
+      </div>
   </div>
 </div>
 
