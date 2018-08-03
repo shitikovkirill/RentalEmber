@@ -4,7 +4,95 @@
   margin-top: 20px;
 }
 body {
-  background: url("../assets/images/background.jpg")!important;
+  background: url("../assets/images/background.jpg") !important;
+}
+
+.filter{
+  display: flex;
+  flex-direction: column;
+}
+
+.filter_p{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.filter_s{
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter_floor{
+  display: flex;
+  padding:25px 0 40px 0;
+}
+.filter_floor .filter-slider{
+  flex-grow: 0.95;
+  padding-left: 25px;
+}
+
+.filter_rooms{
+  padding-bottom: 40px;
+  display: flex;
+}
+.filter_rooms .filter-slider{
+  flex-grow: 0.95;
+  padding-left: 25px;
+}
+
+.filter_full{
+  padding-bottom: 40px;
+  display: flex;
+}
+
+.filter_full .filter-slider{
+  flex-grow: 0.95;
+  padding-left: 25px;
+}
+
+.filter_living{
+  padding-bottom: 40px;
+  display: flex;
+}
+
+.filter_living .filter-slider{
+  flex-grow: 0.95;
+  padding-left: 25px;
 }
 
 
+
+.filter_cat{
+  display: flex;
+  flex-grow: 0.12;
+}
+.filter_cat .filter-select{
+  flex-grow: 1;
+}
+
+.filter_const{
+  flex-grow: 0.2;
+  display: flex;
+}
+.filter_const .filter-select{
+  flex-grow: 1;
+}
+
+.filter_tto{
+  flex-grow: 0.3;
+  display: flex;
+}
+.filter_tto .filter-select{
+  flex-grow: 1;
+}
+
+.filter_period{
+  flex-grow: 0.2;
+  display: flex;
+}
+.filter_period .filter-select{
+  flex-grow: 1;
+}
