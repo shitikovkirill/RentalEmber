@@ -1,3 +1,4 @@
+/*Show picture with big size*/
 .wide {
   display: flex;
   flex-direction: column;
@@ -40,4 +41,38 @@
   }
 }
 
+@media only screen and (max-width: 730px) {
+  .listing {
+    display: flex;
+    flex-direction: column;
+    .rental-image {
+      margin-right: 0 !important;
+      a.image {
+        max-width: 100% !important;
+        position: relative;
+        z-index: 999;
 
+        small {
+          display: none;
+        }
+
+        img {
+          height: initial;
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 580px) {
+  .listing {
+    .rental-data {
+      display: flex;
+      flex-direction: column;
+      .detail {
+        width: auto !important;
+      }
+    }
+  }
+}
