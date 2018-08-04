@@ -40,11 +40,12 @@
       }
     }
   }
+  .slider .tooltip.top {
+    margin-top: -19px !important;
+  }
+  .tooltip-min, .tooltip-max {
+    display: none;
+  }
 }
 
-.slider .tooltip.top {
-  margin-top: -19px !important;
-}
-.tooltip-min, .tooltip-max {
-  display: none;
-}
+
