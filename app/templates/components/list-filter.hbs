@@ -1,6 +1,6 @@
-<div class="filter">
-  <div class="filter_p">
-    <div class="filter_floor">
+<div class="filters-wrapper">
+  <div class="slider-filter">
+    <div class="filter floor">
       <div class="title">Этажность дома: </div>
       <div class="filter-slider">{{ui-slider
       value=storey
@@ -9,11 +9,10 @@
       step=1
       immediateResponse=true
       ticks='0,5,10,15,20'
-      ticksLabels='0,5,10,15,20'
       changed='handleFilterEntry'}}</div>
     </div>
 
-    <div class="filter_rooms">
+    <div class="filter rooms">
       <div class="title">Количество комнат:</div>
       <div class="filter-slider">{{ui-slider
       value=bedrooms
@@ -22,11 +21,10 @@
       step=1
       immediateResponse=true
       ticks='0,5,10'
-      ticksLabels='0,5,10'
       changed='handleFilterEntry'}}</div>
     </div>
 
-    <div class="filter_full">
+    <div class="filter full">
       <div class="title">Общая квадратура: </div>
       <div class="filter-slider">{{range-slider
       value=total_square
@@ -35,12 +33,11 @@
       step=1
       immediateResponse=true
       ticks='0,5,10'
-      ticksLabels='0,5,10'
       changed='handleFilterEntry'}}
       </div>
     </div>
 
-    <div class="filter_living">
+    <div class="filter living">
       <div class="title">Жилая квадратура: </div>
       <div class="filter-slider">{{range-slider
       value=residential_square
@@ -49,13 +46,12 @@
       step=1
       immediateResponse=true
       ticks='0,5,10'
-      ticksLabels='0,5,10'
       changed='handleFilterEntry'}}</div>
     </div>
     </div>
 
-  <div class="filter_s">
-    <div class="filter_cat">
+  <div class="select-filter">
+    <div class="filter cat">
       <div class="title">Категории: </div>
       <div class="filter-select">
       {{#power-select
@@ -68,7 +64,7 @@
       </div>
     </div>
 
-    <div class="filter_const">
+    <div class="filter const">
         <div class="title">Конструкция дома: </div>
         <div class="filter-select">
           {{#power-select
@@ -81,7 +77,7 @@
         </div>
       </div>
 
-    <div class="filter_tto">
+    <div class="filter tto">
         <div class="title">Район: </div>
         <div class="filter-select">
           {{#power-select
@@ -94,7 +90,7 @@
         </div>
       </div>
 
-      <div class="filter_period">
+      <div class="filter period">
         <div class="title">Период постройки: </div>
         <div class="filter-select">
           {{#power-select
