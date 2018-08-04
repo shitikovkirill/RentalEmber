@@ -1,39 +1,43 @@
-<article class="listing">
-  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
-    <img src="{{rental.image}}" alt="">
-    <small>Увеличить</small>
-  </a>
-  <h3>{{link-to rental.title "rentals.show" rental class=rental.id}}</h3>
-  <div class="detail storey">
-    <span>Этажность дома:</span> {{rental.storey}}
+<article class="listing {{if isWide "wide"}}">
+  <div class="rental-image">
+    <a {{action 'toggleImageSize'}} class="image">
+      <img src="{{rental.image}}" alt="">
+      <small>Увеличить</small>
+    </a>
   </div>
-  <div class="detail bedrooms">
-    <span>Количество комнат:</span> {{rental.bedrooms}}
-  </div>
-  <div class="detail total-square">
-    <span>Общая квадратура:</span> {{rental.totalsquare}}
-  </div>
-  <div class="detail residential-square">
-    <span>Жилая квадратура:</span> {{rental.residentialsquare}}
-  </div>
-  <div class="detail category">
-    <span>Категории:</span>
-    {{#each rental.categories as |category| }}
-      <span>{{category.title}}</span>
-    {{/each}}
-  </div>
+  <div class="rental-data">
+    <h3>{{link-to rental.title "rentals.show" rental class=rental.id}}</h3>
+    <div class="detail storey">
+      <span>Этажность дома:</span> {{rental.storeys}}
+    </div>
+    <div class="detail bedrooms">
+      <span>Количество комнат:</span> {{rental.bedrooms}}
+    </div>
+    <div class="detail total-square">
+      <span>Общая квадратура:</span> {{rental.totalsquare}}
+    </div>
+    <div class="detail residential-square">
+      <span>Жилая квадратура:</span> {{rental.residentialsquare}}
+    </div>
+    <div class="detail category">
+      <span>Категории:</span>
+      {{#each rental.categories as |category| }}
+         {{category.title}}
+      {{/each}}
+    </div>
 
-  <div class="detail design">
-    <span>Конструкции дома:</span>
-    {{#each rental.design as |design| }}
-      <span>{{design.title}}</span>
-    {{/each}}
-  </div>
+    <div class="detail design">
+      <span>Конструкции дома:</span>
+      {{#each rental.design as |design| }}
+        {{design.title}}
+      {{/each}}
+    </div>
 
-  <div class="detail period">
-    <span>Период постройки:</span> {{rental.period.title}}
-  </div>
-  <div class="detail district">
-    <span>Район:</span> {{rental.district.title}}
+    <div class="detail period">
+      <span>Период постройки:</span> {{rental.period.title}}
+    </div>
+    <div class="detail district">
+      <span>Район:</span> {{rental.district.title}}
+    </div>
   </div>
 </article>

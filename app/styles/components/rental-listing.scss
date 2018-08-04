@@ -1,0 +1,43 @@
+.wide {
+  display: flex;
+  flex-direction: column;
+  .rental-image {
+    margin-right: 0 !important;
+    a.image {
+      max-width: 100% !important;
+      position: relative;
+      z-index: 999;
+
+      small {
+        display: none;
+      }
+
+      img {
+        height: initial;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.listing {
+  display: flex;
+  .rental-data {
+    .detail {
+      width: 49%;
+    }
+  }
+  .rental-image {
+    margin-right: 45px;
+    img {
+      float: none;
+      margin-right: 0;
+    }
+    small {
+      float: none;
+    }
+  }
+}
+
+

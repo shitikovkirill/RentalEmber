@@ -3,7 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   title: DS.attr(),
 
-  storey: DS.attr('number'),
+  storeys: DS.attr('number'),
   bedrooms: DS.attr('number'),
   totalsquare: DS.attr('number'),
   residentialsquare: DS.attr('number'),
