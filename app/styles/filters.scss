@@ -1,0 +1,50 @@
+.filters-wrapper {
+  margin: 0 25px;
+  .slider-filter{
+    display: flex;
+    flex-direction: column;
+
+    .filter {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 20px;
+
+      .title {
+        flex-basis: 175px;
+      }
+
+      .filter-slider {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .select-filter{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .filter{
+      display: flex;
+      flex-basis: 450px;
+      flex-direction: row;
+      padding-bottom: 15px;
+
+      .title{
+        flex-basis: 148px;
+      }
+
+      .filter-select{
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+.slider .tooltip.top {
+  margin-top: -19px !important;
+}
+.tooltip-min, .tooltip-max {
+  display: none;
+}
